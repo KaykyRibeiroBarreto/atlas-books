@@ -5,12 +5,13 @@
   justify-content: center; /* Alinha o logo ao centro horizontalmente */
   gap: 10px; /* Espaço entre imagem e texto */
   padding: 10px; /* Espaçamento interno */
+  cursor: pointer;
 }
   
   /* Estilo da imagem da logo */
   .logo-img {
-    max-width: 60px; /* Ajusta o tamanho para proporção */
-    max-height: 60px;
+    max-width: 70px; /* Ajusta o tamanho para proporção */
+    max-height: 70px;
     border-radius: 50%; /* Arredonda a imagem */
     object-fit: cover; /* Garante que a imagem não distorça */
     background-color:#faf9f9;

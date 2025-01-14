@@ -1,0 +1,11 @@
+.icones {
+    display: flex;
+    gap: 15px; 
+  }
+  .icone img {
+    width: 34px; 
+    height: 34px; 
+    object-fit: contain; 
+    cursor: pointer;
+  }
+  
