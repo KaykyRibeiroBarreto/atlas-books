@@ -1,25 +1,51 @@
-import React from 'react'
-import Logo from '../logo/index';
-import OpcoesHeader from '../OpcoesHeader/index';
-import IconesHeader from '../IconesHeader/index';
+import { ShoppingCart, User } from 'lucide-react'
+import logo from '../../assets/logo.png';
+import {
+  HeaderContainer,
+  HeaderContent,
+  LogoLink,
+  LogoText,
+  Navigation,
+  StyledNavLink,
+  IconsContainer,
+  IconButton
+} from './styles'
 
-const HeaderContainer = styled.header`
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-`;
+function Header() {
+  return (
+    <HeaderContainer>
+      <HeaderContent>
+        <LogoLink href="/">
+        <img src={logo} alt='Atlas Books Logo' style={{ width: '2.5rem', height: '2.5rem' }}  />
 
+          <LogoText>Atlas Books</LogoText>
+        </LogoLink>
 
-const Header = () => {
-    return (
-      <HeaderContainer>
-        <Logo />
-        <OpcoesHeader />
-        <IconesHeader />
-      </HeaderContainer>
-    );
-  };
-  
+        <Navigation>
+          <StyledNavLink to="/categorias">
+            CATEGORIAS
+          </StyledNavLink>
+          <StyledNavLink to="/favoritos">
+            FAVORITOS
+          </StyledNavLink>
+          <StyledNavLink to="/minha-estante">
+            MINHA ESTANTE
+          </StyledNavLink>
+        </Navigation>
+
+        <IconsContainer>
+          <IconButton aria-label="Conta do usuário">
+            <User size={20} />
+          </IconButton>
+
+          <IconButton aria-label="Carrinho de compras">
+            <ShoppingCart size={20} />
+          </IconButton>
+          
+        </IconsContainer>
+      </HeaderContent>
+    </HeaderContainer>
+  )
+}
 
 export default Header;
-
