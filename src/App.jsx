@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-import { Outlet } from 'react-router-dom'; // Para renderizar as páginas das rotas filhas
+import React, { useState } from 'react';
 import Header from './components/Header';
+import SearchComponent from './components/SearchComponent';
+import { Title } from './components/SearchComponent';
+import { Subtitle } from './components/SearchComponent';
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -29,7 +32,9 @@ function App() {
     <AppContainer>
       <Header />
       <MainContent>
-        <Outlet /> 
+        <Title>Bem-vindo ao Atlas Books</Title>
+        <Subtitle>Encontre os melhores livros aqui!</Subtitle>
+       < SearchComponent />
       </MainContent>
     </AppContainer>
   );
